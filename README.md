@@ -24,4 +24,4 @@ This file holds the Arduino code responsible for controlling the LEDs of the tra
 ### Videos
 The 'videos' folder contains sample traffic videos. These videos serve as test cases to evaluate the functionality and efficiency of the system.
 
-Happy optimizing city commutes with intelligence-driven traffic signals!
+# Happy optimizing city commutes with intelligence-driven traffic signals!
