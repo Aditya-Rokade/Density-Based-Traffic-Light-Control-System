@@ -16,7 +16,7 @@ Here lies the Python script handling video processing tasks. It provides an inte
 ### 3. Model File (model.pt)
 The 'model.pt' file stores the trained model used in traffic density calculations. This model aids in accurate prediction and decision-making within the system.
 
-### 4. Arduino Code (arduino_led_code.ino)
+### 4. Arduino Code (traffic_lights.ino)
 This file holds the Arduino code responsible for controlling the LEDs of the traffic signals. It interfaces with the decision-making system to implement real-time signal adjustments.
 
 ## Additional Folder:
