@@ -1,8 +1,6 @@
 # Density-Based-Traffic-Light-Control-System
 Revamp urban traffic flow with our dynamic signal system! Using Arduino and cameras, our smart framework adapts signal timings to real-time traffic density, optimizing commutes and reducing congestion. Join us in revolutionizing city travel ! 
 
-# Density-Based Dynamic Traffic Signal System
-
 Welcome to our innovative traffic management project aimed at revolutionizing urban commute experiences! This repository houses the intelligent framework designed to dynamically adjust traffic signal timings based on real-time traffic density.
 
 ## Files:
