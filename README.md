@@ -1,26 +1,95 @@
-# Density-Based-Traffic-Light-Control-System
-Revamp urban traffic flow with our dynamic signal system! Using Arduino and cameras, our smart framework adapts signal timings to real-time traffic density, optimizing commutes and reducing congestion. Join us in revolutionizing city travel ! 
+# 🚦 Density-Based Traffic Light Control System
 
-Welcome to our innovative traffic management project aimed at revolutionizing urban commute experiences! This repository houses the intelligent framework designed to dynamically adjust traffic signal timings based on real-time traffic density.
+**Revolutionize urban traffic flow with intelligence-driven traffic signals!**  
+Our smart system uses **real-time video processing, YOLOv5 object detection, and Arduino-based control** to dynamically adjust signal timings based on vehicle density, ensuring smoother commutes and reduced congestion.
 
-## Files:
+---
 
-### 1. Image Detection (image_detection.py)
-This file contains the Python script responsible for detecting traffic density using cameras placed along roadways. It processes images to gather crucial data for signal adjustments.
+## 📌 Project Overview
 
-### 2. Video Processing (video_processing.py)
-Here lies the Python script handling video processing tasks. It provides an interface to test and analyze traffic flow using sample videos from the 'videos' folder.
+Traditional traffic systems rely on fixed signal timings, leading to inefficiencies and congestion. This project introduces an intelligent traffic management system that:
 
-### 3. Model File (model.pt)
-The 'model.pt' file stores the trained model used in traffic density calculations. This model aids in accurate prediction and decision-making within the system.
+- 🚗 Detects real-time traffic density using cameras.
+- 🎥 Processes video feeds to count vehicles using a **YOLOv5 custom-trained model**.
+- 💡 Controls traffic lights dynamically via an **Arduino board** to prioritize high-density lanes.
+- 🛑 Skips empty lanes to reduce unnecessary wait times.
 
-### 4. Arduino Code (traffic_lights.ino)
-This file holds the Arduino code responsible for controlling the LEDs of the traffic signals. It interfaces with the decision-making system to implement real-time signal adjustments.
+---
 
-## Additional Folder:
+## 🛠️ Tech Stack
 
-### Videos
-The 'videos' folder contains sample traffic videos. These videos serve as test cases to evaluate the functionality and efficiency of the system.
+- **Python**, **OpenCV**, **YOLOv5**
+- **Roboflow** (for data labeling)
+- **Google Colab** (for training)
+- **Arduino IDE**
+- **cvzone** (for Python-Arduino communication)
+
+---
+
+## ⚙️ Workflow
+
+### 1. 🚗 Vehicle Detection using YOLOv5
+- Labeled custom dataset with **Roboflow**.
+- Trained a YOLOv5 model on Google Colab.
+- Model detects cars, bikes, trucks, buses, and rickshaws.
+
+### 2. 🎥 Real-time Video Analysis
+- Camera feeds are processed with OpenCV (`image_detection.py`).
+- Vehicle counts per lane are computed in real time.
+
+### 3. 💡 Signal Control Logic
+- Lane with **highest density** gets longer green signal.
+- **Empty lanes are skipped**.
+- Arduino executes signal logic from Python via serial communication using **cvzone**.
+
+---
+
+## 📂 Repository Structure
+
+| File/Folder             | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `image_detection.py`    | Real-time vehicle detection using YOLOv5.                                   |
+| `video_processing.py`   | Test script for analyzing sample traffic videos.                            |
+| `model.pt`              | YOLOv5 trained model file.                                                  |
+| `traffic_lights.ino`    | Arduino code to control LED-based signals.                                  |
+| `videos/`               | Sample traffic videos for testing.                                          |
+
+---
+
+## 🧪 Sample Results
+
+| Before Detection | After Detection |
+|------------------|-----------------|
+| ![](input.jpg) | ![](output.jpg) |
+
+*Figure: Original image vs. detection output with bounding boxes.*
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Requirements
+
+- Python 3.x  
+- OpenCV, PyTorch  
+- Arduino IDE  
+- YOLOv5 repo cloned  
+- `cvzone` Python package
+
+### 🛠 Setup Steps
+
+1. Clone the repo and install Python dependencies.
+2. Prepare dataset and train YOLOv5 using Roboflow and Google Colab.
+3. Upload `traffic_lights.ino` to Arduino and connect LEDs as instructed.
+4. Run `image_detection.py` for real-time detection and traffic light control.
+
+---
+
+## 📈 Results & Highlights
+
+- ✅ Adaptive signal timing based on actual traffic
+- ✅ Skips signals with no traffic
+- ✅ Real-time detection with high accuracy
+- ✅ Scalable for smart city applications
 
 
-### Happy optimizing city commutes with intelligence-driven traffic signals!
