@@ -59,9 +59,9 @@ Traditional traffic systems rely on fixed signal timings, leading to inefficienc
 <h3 align="center">Sample Results</h3>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4d8019be-eeb2-4fea-8fbd-d216c7b7d5c9" height="250" width="45%" alt="Before Detection"/>
+  <img src="https://github.com/user-attachments/assets/4d8019be-eeb2-4fea-8fbd-d216c7b7d5c9" height="320" width="45%" alt="Before Detection"/>
   &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/user-attachments/assets/889bebcd-088a-4dbe-bebe-c7f499f850b5" height="250" width="45%" alt="After Detection"/>
+  <img src="https://github.com/user-attachments/assets/889bebcd-088a-4dbe-bebe-c7f499f850b5" height="320" width="45%" alt="After Detection"/>
 </p>
 
 <p align="center"><b>Figure:</b> Original image (left) vs. detection output with bounding boxes (right).</p>
